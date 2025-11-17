@@ -453,7 +453,7 @@ rtrigCaseTriger [4](CLK:= GVL_MASTER.stNest.bPieceReject);
 rtrigCaseTriger [5](CLK:= biPartPresent );
 rtrigCaseTriger [6](CLK:= );
 rtrigCaseTriger [7](CLK:= NOT biClamp);  // **LAA 17092025);
-rtrigCaseTriger [8](CLK:= );
+rtrigCaseTriger [8](CLK:= stStationStruct.nState = 1220);
 rtrigCaseTriger [9](CLK:= );
 rtrigCaseTriger [10](CLK:= );
 rtrigFaultMachine(CLK:= GVL_MASTER.stMachineStatus.bCycleStopFault OR GVL_MASTER.stMachineStatus.bImmediateFault);
