@@ -14,10 +14,10 @@ STRUCT
 	nHeightPartsFailed				: DINT;
 	nHeightTotalPartsFailed			: DINT;
 	
-	nHeightSensorPartsGood			: ARRAY[1..4] OF DINT;
-	nHeightSensorTotalPartsGood		: ARRAY[1..4] OF DINT;
-	nHeightSensorPartsFailed		: ARRAY[1..4] OF DINT;
-	nHeightSensorTotalPartsFailed	: ARRAY[1..4] OF DINT;
+	nHeightDistancePartsGood		: ARRAY[1..4] OF DINT;
+	nHeightDistanceTotalPartsGood	: ARRAY[1..4] OF DINT;
+	nHeightDistancePartsFailed		: ARRAY[1..4] OF DINT;
+	nHeightDistanceTotalPartsFailed	: ARRAY[1..4] OF DINT;
 	
 	nLeakPartsGood					: DINT;
 	nLeakTotalPartsGood				: DINT;

@@ -26,7 +26,10 @@ STRUCT
 	 sLeakHMI			: WSTRING;
 	 sPieceHMI			: WSTRING;
 
-	 
+	 nDistance			: ARRAY[1..3] OF REAL;
+	 nTarget			: ARRAY[1..3] OF REAL;	
+
+ 
 	 sDate				: STRING;
 	 sTime				: STRING;
 

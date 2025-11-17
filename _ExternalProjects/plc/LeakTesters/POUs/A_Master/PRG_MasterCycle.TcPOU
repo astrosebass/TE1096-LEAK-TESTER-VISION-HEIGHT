@@ -23,7 +23,7 @@ VAR
 		bStationsStopped	: BOOL;
 		bHeighTestCompleteFlag : BOOL;
 		bLeakTestCompleteFlag : BOOL;
-	////////////////////////////////////////////TEST///////////////////////////////////////////////
+		i					: DINT;
 		
 		
 
@@ -255,14 +255,14 @@ ELSE GVL_MASTER.stNest.bNestPartOK := FALSE;
 END_IF
 GVL_MASTER.stNest.sDate := GVL_HMI_GLOBAL.sSystemDate;
 GVL_MASTER.stNest.sTime := GVL_HMI_GLOBAL.sSystemTime;
-IF ((GVL_PERSIST.nCycleNumber <201) AND (bCycleFlag)) THEN
-	GVL_PERSIST.nCycleNumber 	:= GVL_PERSIST.nCycleNumber +1;
-	GVL_HMI_GLOBAL.aStatistics[GVL_PERSIST.nCycleNumber] := GVL_MASTER.stNest;
-	bCycleFlag 					:= FALSE;
-ELSIF ((GVL_PERSIST.nCycleNumber = 201) AND (bCycleFlag)) THEN
-	GVL_PERSIST.nCycleNumber 	:= 1;   //LA** 04092025 GVL_PERSIST.nCycleNumber 	:= 0;  
-	GVL_HMI_GLOBAL.aStatistics[GVL_PERSIST.nCycleNumber] := GVL_MASTER.stNest;
-	bCycleFlag 					:= FALSE;
+
+IF rtrigCaseTriger [8].Q THEN	
+	
+	FOR i :=200 TO 1 BY (-1) DO
+		GVL_HMI_GLOBAL.aStatistics[i]	:= GVL_HMI_GLOBAL.aStatistics[i-1];
+	END_FOR
+	
+	GVL_HMI_GLOBAL.aStatistics[1] := GVL_MASTER.stNest;
 END_IF
 
 IF tonCaseTimDelay[11].Q THEN
@@ -593,9 +593,7 @@ ftrigCaseTriger [1](CLK:= biPartPresent );
       <LineId Id="402" Count="1" />
       <LineId Id="584" Count="1" />
       <LineId Id="266" Count="0" />
-      <LineId Id="323" Count="1" />
-      <LineId Id="314" Count="7" />
-      <LineId Id="313" Count="0" />
+      <LineId Id="956" Count="10" />
       <LineId Id="322" Count="0" />
       <LineId Id="276" Count="2" />
       <LineId Id="275" Count="0" />

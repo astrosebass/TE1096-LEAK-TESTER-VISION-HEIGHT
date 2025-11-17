@@ -211,7 +211,9 @@ END_IF
 
 
 
-
+//to save data 
+GVL_MASTER.stNest.nDistance							:= stHeightMeasurement2.aDistanceBetweenProbes;
+GVL_MASTER.stNest.nTarget							:= stHeightMeasurement2.anDistanceSetPoint;
 
 ]]></ST>
       </Implementation>
@@ -254,72 +256,55 @@ ELSIF GVL_HMI_GLOBAL.bResetHeightFailParts THEN
 END_IF
 
 
-//SENSOR 1
+//Distance 1
 
 IF rtrigCaseTriger[6].Q THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[1]:= GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[1] +1;
-GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[1] := GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[1]+1;
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[1]:= GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[1] +1;
+GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[1] := GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[1]+1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[1] THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[1]:=0;	
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[1]:=0;	
 END_IF
 
 
 IF rtrigCaseTriger[7].Q THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[1]:=GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[1] + 1;
-	GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[1]:= GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[1] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[1]:=GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[1] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[1]:= GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[1] + 1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorBadParts[1] THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[1]:=0;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[1]:=0;
 END_IF
 
-//SENSOR 2
+//Distance 2
 
 IF rtrigCaseTriger[8].Q THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[2]:= GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[2] +1;
-GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[2] := GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[2]+1;
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[2]:= GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[2] +1;
+GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[2] := GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[2]+1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[2] THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[2]:=0;	
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[2]:=0;	
 END_IF
 
 
 IF rtrigCaseTriger[9].Q THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[2]:=GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[2] + 1;
-	GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[2]:= GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[2] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[2]:=GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[2] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[2]:= GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[2] + 1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorBadParts[2] THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[2]:=0;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[2]:=0;
 END_IF
 
-//SENSOR 3
+//Distance 3
 
 IF rtrigCaseTriger[10].Q THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[3]:= GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[3] +1;
-GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[3] := GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[3]+1;
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[3]:= GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[3] +1;
+GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[3] := GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsGood[3]+1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[3] THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[3]:=0;	
+GVL_PERSIST.stPartsInspection.nHeightDistancePartsGood[3]:=0;	
 END_IF
 
 
 IF rtrigCaseTriger[11].Q THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[3]:=GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[3] + 1;
-	GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[3]:= GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[3] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[3]:=GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[3] + 1;
+	GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[3]:= GVL_PERSIST.stPartsInspection.nHeightDistanceTotalPartsFailed[3] + 1;
 ELSIF GVL_HMI_GLOBAL.aResetHeightSensorBadParts[3] THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[3]:=0;
-END_IF
-
-//SENSOR 4
-
-IF rtrigCaseTriger[12].Q THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[4]:= GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[4] +1;
-GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[4] := GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsGood[4]+1;
-ELSIF GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[4] THEN
-GVL_PERSIST.stPartsInspection.nHeightSensorPartsGood[4]:=0;	
-END_IF
-
-
-IF rtrigCaseTriger[13].Q THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[4]:=GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[4] + 1;
-	GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[4]:= GVL_PERSIST.stPartsInspection.nHeightSensorTotalPartsFailed[4] + 1;
-ELSIF GVL_HMI_GLOBAL.aResetHeightSensorBadParts[4] THEN
-	GVL_PERSIST.stPartsInspection.nHeightSensorPartsFailed[4]:=0;
+	GVL_PERSIST.stPartsInspection.nHeightDistancePartsFailed[3]:=0;
 END_IF]]></ST>
       </Implementation>
     </Action>
@@ -344,11 +329,9 @@ rtrigCaseTriger[5](clk:= stStationStruct.bStationAbort);
 rtrigCaseTriger[6](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[1]);
 rtrigCaseTriger[7](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralFailHeightTest[1]);
 rtrigCaseTriger[8](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[2]);
-rtrigCaseTriger[9](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[2]);
+rtrigCaseTriger[9](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralFailHeightTest[2]);
 rtrigCaseTriger[10](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[3]);
-rtrigCaseTriger[11](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[3]);
-rtrigCaseTriger[12](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[4]);
-rtrigCaseTriger[13](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralPassHeightTest[4]);
+rtrigCaseTriger[11](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGeneralFailHeightTest[3]);
 
 ]]></ST>
       </Implementation>
@@ -440,6 +423,7 @@ rtrigCaseTriger[13](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGene
       <LineId Id="43" Count="0" />
       <LineId Id="38" Count="0" />
       <LineId Id="14" Count="0" />
+      <LineId Id="120" Count="1" />
       <LineId Id="20" Count="1" />
       <LineId Id="2" Count="0" />
     </LineIds>
@@ -456,24 +440,12 @@ rtrigCaseTriger[13](clk:= (stStationStruct.nState=1240) AND GVL_HMI_GLOBAL.aGene
       <LineId Id="2" Count="0" />
     </LineIds>
     <LineIds Name="PRG_HeightTest.ACT_Statistics">
-      <LineId Id="30" Count="1" />
-      <LineId Id="2" Count="12" />
-      <LineId Id="1" Count="0" />
-      <LineId Id="33" Count="0" />
-      <LineId Id="32" Count="0" />
-      <LineId Id="34" Count="0" />
-      <LineId Id="16" Count="13" />
-      <LineId Id="15" Count="0" />
-      <LineId Id="36" Count="15" />
-      <LineId Id="35" Count="0" />
-      <LineId Id="53" Count="15" />
-      <LineId Id="52" Count="0" />
-      <LineId Id="70" Count="15" />
+      <LineId Id="86" Count="66" />
       <LineId Id="69" Count="0" />
     </LineIds>
     <LineIds Name="PRG_HeightTest.ACT_TimTrig">
       <LineId Id="2" Count="19" />
-      <LineId Id="24" Count="2" />
+      <LineId Id="24" Count="0" />
       <LineId Id="1" Count="0" />
       <LineId Id="23" Count="0" />
       <LineId Id="22" Count="0" />

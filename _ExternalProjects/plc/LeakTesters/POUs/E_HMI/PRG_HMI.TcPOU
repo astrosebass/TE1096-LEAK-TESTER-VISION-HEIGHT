@@ -9,13 +9,32 @@ VAR
 	tofCase						: ARRAY [1..20] OF TOF;
 	rtrigCaseTriger				: ARRAY [1..20] OF R_TRIG;
 
+	tonResetStatistics			: TON;
 END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[ACT_ScreensNamesSet();
 ACT_Buttons();
 ACT_TimTrig();
-ACT_General();]]></ST>
+ACT_General();
+
+tonResetStatistics( IN := 	GVL_HMI_GLOBAL.aResetHeightSensorBadParts [1] 	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [2] 	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [3] 	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [4] 	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[1]	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[2]	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[3]	OR
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[4]	OR
+							GVL_HMI_GLOBAL.bResetHeightFailParts			OR
+							GVL_HMI_GLOBAL.bResetGoodParts					OR
+							GVL_HMI_GLOBAL.bResetLeakBadParts				OR
+							GVL_HMI_GLOBAL.bResetLeakGoodParts				OR
+							GVL_HMI_GLOBAL.bResetVisionBadParts				OR
+							GVL_HMI_GLOBAL.bResetVisionGoodParts			OR
+							GVL_HMI_GLOBAL.bResetFailedParts				OR
+							GVL_HMI_GLOBAL.bResetGoodParts					,
+							PT												:= T#500MS);]]></ST>
     </Implementation>
     <Action Name="ACT_Buttons" Id="{516d1fa4-b74a-4152-be9e-d2291d807b03}">
       <Implementation>
@@ -89,6 +108,28 @@ IF tonCaseDelay[10].Q THEN
 		
 END_IF
 
+IF tonResetStatistics.Q THEN
+	
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [1] 	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [2] 	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [3] 	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorBadParts [4] 	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[1]	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[2]	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[3]	:= FALSE;
+							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[4]	:= FALSE;
+							GVL_HMI_GLOBAL.bResetHeightFailParts			:= FALSE;
+							GVL_HMI_GLOBAL.bResetGoodParts					:= FALSE;
+							GVL_HMI_GLOBAL.bResetLeakBadParts				:= FALSE;
+							GVL_HMI_GLOBAL.bResetLeakGoodParts				:= FALSE;
+							GVL_HMI_GLOBAL.bResetVisionBadParts				:= FALSE;
+							GVL_HMI_GLOBAL.bResetVisionGoodParts			:= FALSE;
+							GVL_HMI_GLOBAL.bResetFailedParts				:= FALSE;
+							GVL_HMI_GLOBAL.bResetGoodParts					:= FALSE;
+
+
+END_IF
+
 
 
 ]]></ST>
@@ -152,6 +193,10 @@ rtrigCaseTriger[1](CLK := GVL_MASTER.stNest.bPieceReject);
       <LineId Id="52" Count="1" />
       <LineId Id="43" Count="0" />
       <LineId Id="63" Count="0" />
+      <LineId Id="75" Count="12" />
+      <LineId Id="104" Count="1" />
+      <LineId Id="88" Count="1" />
+      <LineId Id="74" Count="0" />
     </LineIds>
     <LineIds Name="PRG_HMI.ACT_Buttons">
       <LineId Id="2" Count="15" />
@@ -180,6 +225,9 @@ rtrigCaseTriger[1](CLK := GVL_MASTER.stNest.bPieceReject);
       <LineId Id="63" Count="0" />
       <LineId Id="69" Count="4" />
       <LineId Id="61" Count="1" />
+      <LineId Id="74" Count="13" />
+      <LineId Id="94" Count="1" />
+      <LineId Id="88" Count="5" />
       <LineId Id="40" Count="0" />
       <LineId Id="34" Count="0" />
       <LineId Id="18" Count="0" />
