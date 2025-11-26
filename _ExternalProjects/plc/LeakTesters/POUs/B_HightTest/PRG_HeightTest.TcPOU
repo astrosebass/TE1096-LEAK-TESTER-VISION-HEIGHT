@@ -220,14 +220,14 @@ GVL_MASTER.stNest.nTarget							:= stHeightMeasurement2.anDistanceSetPoint;
     </Action>
     <Action Name="ACT_ProbesPosition" Id="{1d38391f-9002-4178-b9c3-0fe508376fc1}">
       <Implementation>
-        <ST><![CDATA[IF ((stHeightMeasurement2.aScaledSensorCurrentValue[1]>4)  AND 
-	(stHeightMeasurement2.aScaledSensorCurrentValue[1]<9)) AND	
-   ((stHeightMeasurement2.aScaledSensorCurrentValue[2]>4)  AND 
-	(stHeightMeasurement2.aScaledSensorCurrentValue[2]<9)) AND
-   ((stHeightMeasurement2.aScaledSensorCurrentValue[3]>4)  AND 
-	(stHeightMeasurement2.aScaledSensorCurrentValue[3]<9)) AND
-   ((stHeightMeasurement2.aScaledSensorCurrentValue[4]>4)  AND 
-	(stHeightMeasurement2.aScaledSensorCurrentValue[4]<9)) THEN
+        <ST><![CDATA[IF ((stHeightMeasurement2.aScaledSensorCurrentValue[1]> GVL_PERSIST.stHeightLimits.nLow)  AND 
+	(stHeightMeasurement2.aScaledSensorCurrentValue[1]< GVL_PERSIST.stHeightLimits.nHigh)) AND	
+   ((stHeightMeasurement2.aScaledSensorCurrentValue[2]> GVL_PERSIST.stHeightLimits.nLow)  AND 
+	(stHeightMeasurement2.aScaledSensorCurrentValue[2]< GVL_PERSIST.stHeightLimits.nHigh)) AND
+   ((stHeightMeasurement2.aScaledSensorCurrentValue[3]> GVL_PERSIST.stHeightLimits.nLow)  AND 
+	(stHeightMeasurement2.aScaledSensorCurrentValue[3]< GVL_PERSIST.stHeightLimits.nHigh)) AND
+   ((stHeightMeasurement2.aScaledSensorCurrentValue[4]> GVL_PERSIST.stHeightLimits.nLow)  AND 
+	(stHeightMeasurement2.aScaledSensorCurrentValue[4]< GVL_PERSIST.stHeightLimits.nHigh)) THEN
 
 		GVL_HMI_GLOBAL.bProbesPositionOk				:= TRUE;
 ELSE 	GVL_HMI_GLOBAL.bProbesPositionOk				:= FALSE;		

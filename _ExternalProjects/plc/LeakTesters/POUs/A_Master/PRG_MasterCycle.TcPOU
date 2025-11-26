@@ -258,7 +258,7 @@ GVL_MASTER.stNest.sTime := GVL_HMI_GLOBAL.sSystemTime;
 
 IF rtrigCaseTriger [8].Q THEN	
 	
-	FOR i :=200 TO 1 BY (-1) DO
+	FOR i :=200 TO 2 BY (-1) DO
 		GVL_HMI_GLOBAL.aStatistics[i]	:= GVL_HMI_GLOBAL.aStatistics[i-1];
 	END_FOR
 	

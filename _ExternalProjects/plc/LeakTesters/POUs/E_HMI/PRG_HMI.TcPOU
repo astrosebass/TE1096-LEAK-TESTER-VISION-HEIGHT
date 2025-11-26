@@ -27,6 +27,7 @@ tonResetStatistics( IN := 	GVL_HMI_GLOBAL.aResetHeightSensorBadParts [1] 	OR
 							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[3]	OR
 							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[4]	OR
 							GVL_HMI_GLOBAL.bResetHeightFailParts			OR
+							GVL_HMI_GLOBAL.bResetHeightGoodParts			OR
 							GVL_HMI_GLOBAL.bResetGoodParts					OR
 							GVL_HMI_GLOBAL.bResetLeakBadParts				OR
 							GVL_HMI_GLOBAL.bResetLeakGoodParts				OR
@@ -119,6 +120,7 @@ IF tonResetStatistics.Q THEN
 							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[3]	:= FALSE;
 							GVL_HMI_GLOBAL.aResetHeightSensorGoodParts[4]	:= FALSE;
 							GVL_HMI_GLOBAL.bResetHeightFailParts			:= FALSE;
+							GVL_HMI_GLOBAL.bResetHeightGoodParts			:= FALSE;
 							GVL_HMI_GLOBAL.bResetGoodParts					:= FALSE;
 							GVL_HMI_GLOBAL.bResetLeakBadParts				:= FALSE;
 							GVL_HMI_GLOBAL.bResetLeakGoodParts				:= FALSE;
@@ -193,7 +195,9 @@ rtrigCaseTriger[1](CLK := GVL_MASTER.stNest.bPieceReject);
       <LineId Id="52" Count="1" />
       <LineId Id="43" Count="0" />
       <LineId Id="63" Count="0" />
-      <LineId Id="75" Count="12" />
+      <LineId Id="75" Count="9" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="85" Count="2" />
       <LineId Id="104" Count="1" />
       <LineId Id="88" Count="1" />
       <LineId Id="74" Count="0" />
@@ -225,7 +229,9 @@ rtrigCaseTriger[1](CLK := GVL_MASTER.stNest.bPieceReject);
       <LineId Id="63" Count="0" />
       <LineId Id="69" Count="4" />
       <LineId Id="61" Count="1" />
-      <LineId Id="74" Count="13" />
+      <LineId Id="74" Count="10" />
+      <LineId Id="96" Count="0" />
+      <LineId Id="85" Count="2" />
       <LineId Id="94" Count="1" />
       <LineId Id="88" Count="5" />
       <LineId Id="40" Count="0" />

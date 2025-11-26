@@ -1084,8 +1084,8 @@
 			<Licenses CacheOrCheckLicensesOnStartup="true">
 				<Target BkhfOrder="01577313">
 					<ManualSelect>{796D380F-D49E-4C0C-A05F-500052FAC883}</ManualSelect>
-					<TargetSelect TargetId="2">{796D380F-D49E-4C0C-A05F-500052FAC883}</TargetSelect>
 					<TargetSelect TargetId="2">{66689887-CCBD-452C-AC9A-039D997C6E66}</TargetSelect>
+					<TargetSelect TargetId="2">{796D380F-D49E-4C0C-A05F-500052FAC883}</TargetSelect>
 					<LicenseDevice DongleHardwareId="2" DongleDevice="#x0302000a" DongleLevel="50" DongleSystemId="{E64EC1AC-0725-B809-06DD-8093F3FB17F9}" DongleSerialNumber="000bt62i"/>
 				</Target>
 			</Licenses>
@@ -1097,7 +1097,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{82C0BC2F-B8AE-4B65-B12E-3410285B5DB1}" Name="LeakTesters" PrjFilePath="LeakTesters\LeakTesters.plcproj" TmcFilePath="LeakTesters\LeakTesters.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="LeakTesters\LeakTesters.tmc" TmcHash="{8A90EE83-192E-7A15-4CF0-316CF8289C4E}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="LeakTesters\LeakTesters.tmc" TmcHash="{CF49565A-9175-41D7-AC2A-1AB2EA881E5D}">
 					<Name>LeakTesters Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
@@ -19516,13 +19516,16 @@
 			</Device>
 			<Device Id="2" DevType="119" AmsPort="28674" AmsNetId="172.18.237.82.3.1" RemoteName="Device 2 (EL6631)">
 				<Name>Device 2 (EL6631)</Name>
-				<DevData>000000000d00000000000000a08601005465726d2031332028454c3636333129000000000000000000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
+				<DevData>000000000d00000000000000a08601005465726d2031332028454c3636333129000000000000000000000000000000000000000000000000000000000000000000000000000003004707a8c000ffffff000105a21c5e040000000000000000000000000000000000000000000000000000000000000000000000000000000000</DevData>
 				<Image Id="3" AddrType="4" ImageType="3" SizeIn="173" SizeOut="305">
 					<Name>Image</Name>
 				</Image>
 				<Box Id="6" BoxType="9121">
 					<Name>is2802</Name>
-					<Comment><![CDATA[GSDML: GSDML-V2.42-Cognex-IS2800ClassB-20230405.xml
+					<Comment><![CDATA[
+The GSDML is not available!
+
+GSDML: GSDML-V2.42-Cognex-IS2800ClassB-20230405.xml
 GSDML path: C:\Users\Sebastian.Ulloa\Desktop\LeakTesters\Leak Tester Profinet\IS2800_IS3800 EDS_GDS_RSLogix Files from ISVS 23_2 (1)\IS2800 & IS3800 EDS, GDS, RSLogix Files from ISVS 23.2\GSD\
 VendorName: Cognex Corp.
 OrderNumber: IS28XX-XX
@@ -19979,7 +19982,10 @@ Submodule Info: Reads 64 bytes from In-Sight spreadsheet
 				</Box>
 				<Box Id="7" BoxType="9121">
 					<Name>i28</Name>
-					<Comment><![CDATA[GSDML Name: GSDML-V2.33-CTS-I28-20210819.xml
+					<Comment><![CDATA[
+The GSDML is not available!
+
+GSDML Name: GSDML-V2.33-CTS-I28-20210819.xml
 Path: C:\Users\Sebastian.Ulloa\Desktop\LeakTesters\Leak Tester Profinet\PROFINET\
 VendorName: Cincinnati Test Systems
 OrderNumber: 00210
@@ -21534,7 +21540,10 @@ Submodule Info: Barcode_data
 				</Box>
 				<Box Id="8" BoxType="9121">
 					<Name>dl-pn1</Name>
-					<Comment><![CDATA[GSDML Name: GSDML-V2.3-Keyence-DL-PN1-20230224.xml
+					<Comment><![CDATA[
+The GSDML is not available!
+
+GSDML Name: GSDML-V2.3-Keyence-DL-PN1-20230224.xml
 Path: C:\Users\Sebastian.Ulloa\Desktop\LeakTesters\Leak Tester Profinet\DL-PN1_GSDML_103\DL-PN1_GSDML_103\
 VendorName: Keyence
 OrderNumber: DL-PN1

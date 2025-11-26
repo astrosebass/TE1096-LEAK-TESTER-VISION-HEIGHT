@@ -194,6 +194,15 @@
             "startOffset": 1,
             "type": "array"
         },
+        "PLC1.ARRAY_1..201_OF-ST_Nest": {
+            "items": {
+                "$ref": "#/definitions/PLC1.ST_Nest"
+            },
+            "maxItems": 201,
+            "minItems": 201,
+            "startOffset": 1,
+            "type": "array"
+        },
         "PLC1.ARRAY_1..3_OF-REAL": {
             "items": {
                 "$ref": "tchmi:general#/definitions/REAL"
@@ -969,7 +978,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "propertyOrder": 7
+                            "propertyOrder": 8
                         }
                     ]
                 },
@@ -989,7 +998,7 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "propertyOrder": 9
+                            "propertyOrder": 10
                         }
                     ]
                 },
@@ -1023,6 +1032,26 @@
                         }
                     ]
                 },
+                "bPiecePass": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/BOOL"
+                        },
+                        {
+                            "propertyOrder": 7
+                        }
+                    ]
+                },
+                "bPieceReject": {
+                    "allOf": [
+                        {
+                            "$ref": "tchmi:general#/definitions/BOOL"
+                        },
+                        {
+                            "propertyOrder": 11
+                        }
+                    ]
+                },
                 "bVisionPass": {
                     "allOf": [
                         {
@@ -1039,7 +1068,27 @@
                             "$ref": "tchmi:general#/definitions/BOOL"
                         },
                         {
-                            "propertyOrder": 8
+                            "propertyOrder": 9
+                        }
+                    ]
+                },
+                "nDistance": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..3_OF-REAL"
+                        },
+                        {
+                            "propertyOrder": 16
+                        }
+                    ]
+                },
+                "nTarget": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..3_OF-REAL"
+                        },
+                        {
+                            "propertyOrder": 17
                         }
                     ]
                 },
@@ -1049,7 +1098,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 14
+                            "propertyOrder": 18
                         }
                     ]
                 },
@@ -1059,7 +1108,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 10
+                            "propertyOrder": 12
                         }
                     ]
                 },
@@ -1069,7 +1118,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 12
+                            "propertyOrder": 14
                         }
                     ]
                 },
@@ -1079,7 +1128,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 13
+                            "propertyOrder": 15
                         }
                     ]
                 },
@@ -1089,7 +1138,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 15
+                            "propertyOrder": 19
                         }
                     ]
                 },
@@ -1099,7 +1148,7 @@
                             "$ref": "tchmi:general#/definitions/STRING%2880%29"
                         },
                         {
-                            "propertyOrder": 11
+                            "propertyOrder": 13
                         }
                     ]
                 }
@@ -1128,6 +1177,46 @@
                         }
                     ]
                 },
+                "nHeightDistancePartsFailed": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
+                        },
+                        {
+                            "propertyOrder": 11
+                        }
+                    ]
+                },
+                "nHeightDistancePartsGood": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
+                        },
+                        {
+                            "propertyOrder": 9
+                        }
+                    ]
+                },
+                "nHeightDistanceTotalPartsFailed": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
+                        },
+                        {
+                            "propertyOrder": 12
+                        }
+                    ]
+                },
+                "nHeightDistanceTotalPartsGood": {
+                    "allOf": [
+                        {
+                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
+                        },
+                        {
+                            "propertyOrder": 10
+                        }
+                    ]
+                },
                 "nHeightPartsFailed": {
                     "allOf": [
                         {
@@ -1145,46 +1234,6 @@
                         },
                         {
                             "propertyOrder": 5
-                        }
-                    ]
-                },
-                "nHeightSensorPartsFailed": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
-                        },
-                        {
-                            "propertyOrder": 11
-                        }
-                    ]
-                },
-                "nHeightSensorPartsGood": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
-                        },
-                        {
-                            "propertyOrder": 9
-                        }
-                    ]
-                },
-                "nHeightSensorTotalPartsFailed": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
-                        },
-                        {
-                            "propertyOrder": 12
-                        }
-                    ]
-                },
-                "nHeightSensorTotalPartsGood": {
-                    "allOf": [
-                        {
-                            "$ref": "#/definitions/PLC1.ARRAY_1..4_OF-DINT"
-                        },
-                        {
-                            "propertyOrder": 10
                         }
                     ]
                 },
@@ -5298,26 +5347,6 @@
             "SUBSYMBOL_MAPPING": "",
             "USEMAPPING": true
         },
-        "PLC1.GVL_HMI_GLOBAL.GroupID": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::GroupID",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_HMI_GLOBAL.TEST2": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::TEST2",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/REAL"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_HMI_GLOBAL.aActiveEvents": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -5372,16 +5401,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_HMI_GLOBAL.aIOScreen": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::aIOScreen",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..16_OF-STRING-200"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_HMI_GLOBAL.aManualScreen": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -5432,16 +5451,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_HMI_GLOBAL.aSelectReferenceHeightTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::aSelectReferenceHeightTest",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..4_OF-BOOL"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_HMI_GLOBAL.aSensorSetPointsHeightTest": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -5458,17 +5467,14 @@
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI_GLOBAL::aStatistics",
             "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..200_OF-ST_Nest"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_HMI_GLOBAL.aTolerancesHeightTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::aTolerancesHeightTest",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..4_OF-DINT"
+                "allOf": [
+                    {
+                        "comment": "LA** 04092025 >> : ARRAY [1..200] OF ST_Nest;"
+                    },
+                    {
+                        "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..201_OF-ST_Nest"
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -5512,16 +5518,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_HMI_GLOBAL.ast_i28LasResult": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::ast_i28LasResult",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..200_OF-st_i28LasResult"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_HMI_GLOBAL.bAutocycleFaultDialog": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -5537,16 +5533,6 @@
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI_GLOBAL::bEnableManualMode",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_HMI_GLOBAL.bLeakButtonImmediateFaultFlag": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::bLeakButtonImmediateFaultFlag",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/BOOL"
             },
@@ -5846,41 +5832,11 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_HMI_GLOBAL.nIOFrameNumber": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::nIOFrameNumber",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_HMI_GLOBAL.nRegionMain": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
             "DYNAMIC": true,
             "MAPPING": "PLC1::GVL_HMI_GLOBAL::nRegionMain",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_HMI_GLOBAL.nTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::nTest",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_HMI_GLOBAL.nTest5": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_HMI_GLOBAL::nTest5",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/INT"
             },
@@ -6822,66 +6778,6 @@
             },
             "USEMAPPING": true
         },
-        "PLC1.GVL_PERSIST.aUserLog": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::aUserLog",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..250_OF-Tc2_System.T_MaxString"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_PERSIST.aUserLogTime": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::aUserLogTime",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..250_OF-Tc2_System.T_MaxString"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_PERSIST.anValueScaled.0": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::anValueScaled[0]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/DINT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_PERSIST.anValueScaled.1": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::anValueScaled[1]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/DINT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_PERSIST.anValueScaled.2": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::anValueScaled[2]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/DINT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_PERSIST.anValueScaled.3": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_PERSIST::anValueScaled[3]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/DINT"
-            },
-            "USEMAPPING": true
-        },
         "PLC1.GVL_PERSIST.ast_i28LasResult": {
             "ACCESS": 3,
             "DOMAIN": "ADS",
@@ -6889,6 +6785,40 @@
             "MAPPING": "PLC1::GVL_PERSIST::ast_i28LasResult",
             "SCHEMA": {
                 "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..250_OF-st_i28LasResult"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_PERSIST.stHeightLimits.nHigh": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_PERSIST::stHeightLimits::nHigh",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 1
+                    }
+                ]
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.GVL_PERSIST.stHeightLimits.nLow": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::GVL_PERSIST::stHeightLimits::nLow",
+            "SCHEMA": {
+                "allOf": [
+                    {
+                        "$ref": "tchmi:general#/definitions/REAL"
+                    },
+                    {
+                        "propertyOrder": 2
+                    }
+                ]
             },
             "USEMAPPING": true
         },
@@ -6909,85 +6839,6 @@
             "MAPPING": "PLC1::GVL_PERSIST::stUserLogHMI",
             "SCHEMA": {
                 "$ref": "tchmi:server#/definitions/PLC1.ARRAY_0..250_OF-ST_UserLogHMI"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_Test.JobId": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_Test::JobId",
-            "SCHEMA": {
-                "allOf": [
-                    {
-                        "$ref": "tchmi:general#/definitions/UINT"
-                    },
-                    {
-                        "attributes": {
-                            "TcAddressType": "Input"
-                        }
-                    }
-                ]
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_Test.ON": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_Test::ON",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/BOOL"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.GVL_Test.aTest": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::GVL_Test::aTest",
-            "SCHEMA": {
-                "$ref": "tchmi:server#/definitions/PLC1.ARRAY_1..10_OF-STRING-80"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.PRG_HMI.nHeightMeasureStateValue.0": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::PRG_HMI::nHeightMeasureStateValue[0]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.PRG_HMI.nHeightMeasureStateValue.1": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::PRG_HMI::nHeightMeasureStateValue[1]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.PRG_HMI.nHeightMeasureStateValue.2": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::PRG_HMI::nHeightMeasureStateValue[2]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
-            },
-            "USEMAPPING": true
-        },
-        "PLC1.PRG_HMI.nHeightMeasureStateValue.3": {
-            "ACCESS": 3,
-            "DOMAIN": "ADS",
-            "DYNAMIC": true,
-            "MAPPING": "PLC1::PRG_HMI::nHeightMeasureStateValue[3]",
-            "SCHEMA": {
-                "$ref": "tchmi:general#/definitions/INT"
             },
             "USEMAPPING": true
         },
@@ -8193,6 +8044,8 @@
                 "PLC1.GVL_PERSIST.anValueScaled.2": 3,
                 "PLC1.GVL_PERSIST.anValueScaled.3": 3,
                 "PLC1.GVL_PERSIST.ast_i28LasResult": 3,
+                "PLC1.GVL_PERSIST.stHeightLimits.nHigh": 3,
+                "PLC1.GVL_PERSIST.stHeightLimits.nLow": 3,
                 "PLC1.GVL_PERSIST.stPartsInspection": 3,
                 "PLC1.GVL_PERSIST.stUserLogHMI": 3,
                 "PLC1.GVL_Test.JobId": 3,

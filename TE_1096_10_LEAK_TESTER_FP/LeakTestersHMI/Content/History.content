@@ -1,5 +1,5 @@
 <div id="History" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width="1280" data-tchmi-height="506">
-<div id="TcHmiDatagrid_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="476" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="1280" data-tchmi-width-unit="px" data-tchmi-src-data="%s%PLC1.GVL_HMI_GLOBAL.aStatistics%/s%" data-tchmi-grid-font-size="20" data-tchmi-grid-font-style="Normal" data-tchmi-grid-font-weight="Bold">
+<div id="TcHmiDatagrid_3" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiDatagrid" data-tchmi-height="476" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width="1280" data-tchmi-width-unit="px" data-tchmi-grid-font-size="20" data-tchmi-grid-font-style="Normal" data-tchmi-grid-font-weight="Bold" data-tchmi-src-data="%s%PLC1.GVL_HMI_GLOBAL.aStatistics%/s%">
 <script data-tchmi-target-attribute="data-tchmi-cell-content-padding" type="application/json">
 {
   "left": 3,
@@ -39,7 +39,7 @@
     "autoSelectText": false
   },
   {
-    "name": "nDistance[1]",
+    "name": "nDistance[0]",
     "label": "Distance 1",
     "control": "TextBox",
     "width": 0,
@@ -55,10 +55,22 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 4.0
+        }
+      ]
+    }
   },
   {
-    "name": "nTarget[1]",
+    "name": "nTarget[0]",
     "label": "Target 1",
     "control": "TextBox",
     "width": 0,
@@ -74,10 +86,22 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 3.0
+        }
+      ]
+    }
   },
   {
-    "name": "nDistance[2]",
+    "name": "nDistance[1]",
     "label": "Distance 2",
     "control": "TextBox",
     "width": 0,
@@ -93,10 +117,22 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 4.0
+        }
+      ]
+    }
   },
   {
-    "name": "nTarget[2]",
+    "name": "nTarget[1]",
     "label": "Target 2",
     "control": "TextBox",
     "width": 0,
@@ -112,10 +148,22 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 3.0
+        }
+      ]
+    }
   },
   {
-    "name": "nDistance[3]",
+    "name": "nDistance[2]",
     "label": "Distance 3",
     "control": "TextBox",
     "width": 0,
@@ -131,10 +179,22 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 4.0
+        }
+      ]
+    }
   },
   {
-    "name": "nTarget[3]",
+    "name": "nTarget[2]",
     "label": "Target 3",
     "control": "TextBox",
     "width": 0,
@@ -150,7 +210,19 @@
     "headerVerticalAlignment": "Center",
     "ignoreEscapeSequences": false,
     "autoFocusOut": true,
-    "autoSelectText": false
+    "autoSelectText": false,
+    "format": {
+      "objectType": "Function",
+      "active": true,
+      "fn": "TcHmi.Functions.Beckhoff.GaugeValueFormatter",
+      "fnParams": [
+        {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/Number",
+          "value": 3.0
+        }
+      ]
+    }
   },
   {
     "name": "sLeakHMI",
@@ -261,6 +333,8 @@
   }
 ]
 </script>
+
+
 
 
 
