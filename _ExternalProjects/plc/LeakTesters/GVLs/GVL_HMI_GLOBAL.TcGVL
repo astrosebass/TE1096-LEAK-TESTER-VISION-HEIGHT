@@ -32,7 +32,6 @@ VAR_GLOBAL
 	aActiveEvents					: ARRAY [0..39] OF T_MaxSTring;	//Active events - connected to Alarm scree in HMI	
 	stActiveEventsHMI				: ARRAY [0..39] OF ST_ActiveEventsHMI;
 	
-	aStatistics						: ARRAY [1..201] OF ST_Nest;//LA** 04092025 >> : ARRAY [1..200] OF ST_Nest;
 	sMessageToOperator				: WSTRING(200);
 	sActualProcess					: WSTRING(200);
 	aIOScreen						: ARRAY [0..10] OF STRING(200);
@@ -111,12 +110,15 @@ VAR_GLOBAL
 
 END_VAR
 VAR_GLOBAL PERSISTENT
+	
+	aStatistics					: ARRAY [1..201] OF ST_Nest;//LA** 04092025 >> : ARRAY [1..200] OF ST_Nest;
 	stAlarmHistory				:ARRAY [00..250] OF ST_AlarmHistory;
 	aEventLog					:ARRAY [0..250] OF T_MaxSTring;	//Event log - connected to alarm history in HMI	
 	aTimeLog					:ARRAY [0..250] OF T_MaxSTring;
 	aDateLog					:ARRAY [0..250] OF T_MaxSTring;
 	aMinLimitHeightTest				: ARRAY[1..4] OF DINT;
-	aMaxLimitHeightTest				: ARRAY[1..4] OF DINT;			
+	aMaxLimitHeightTest				: ARRAY[1..4] OF DINT;	
+		
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>

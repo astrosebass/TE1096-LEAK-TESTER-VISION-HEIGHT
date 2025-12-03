@@ -1097,7 +1097,7 @@
 		</System>
 		<Plc>
 			<Project GUID="{82C0BC2F-B8AE-4B65-B12E-3410285B5DB1}" Name="LeakTesters" PrjFilePath="LeakTesters\LeakTesters.plcproj" TmcFilePath="LeakTesters\LeakTesters.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="LeakTesters\LeakTesters.tmc" TmcHash="{CF49565A-9175-41D7-AC2A-1AB2EA881E5D}">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="LeakTesters\LeakTesters.tmc" TmcHash="{CD3297A3-3E43-13AF-E2F0-69C88167D82B}">
 					<Name>LeakTesters Instance</Name>
 					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 					<Vars VarGrpType="1">
